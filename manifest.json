@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Language Learning Screenshot Translator",
+    "version": "0.1",
+    "description": "Translate text from screenshots to learn languages while browsing.",
+    "permissions": [
+      "storage",
+      "https://translate.yandex.net/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }

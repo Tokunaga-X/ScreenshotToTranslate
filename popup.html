@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ScreenshotToTranslate</title>
+    <script src="tesseract.min.js"></script>
+    <script src="popup.js"></script>
+    <style>
+      body {
+        width: 350px;
+        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 1.5em;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        color: #34495e;
+      }
+      select,
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #bdc3c7;
+        border-radius: 5px;
+        font-size: 1em;
+        box-sizing: border-box;
+      }
+      select {
+        background-color: #ecf0f1;
+        cursor: pointer;
+      }
+      input[type="file"] {
+        background-color: #fff;
+      }
+      #status,
+      #originalText,
+      #translatedText {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        color: #2c3e50;
+        font-size: 0.9em;
+        word-wrap: break-word;
+      }
+      #status {
+        font-style: italic;
+        color: #7f8c8d;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ScreenshotToTranslate</h1>
+    <label for="targetLang">Choose Your Language:</label>
+    <select id="targetLang">
+      <option value="zh-CN">Chinese (Simplified)</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+    </select>
+    <input type="file" id="imageUpload" accept="image/*" />
+    <div id="status">Status: Ready</div>
+    <div id="originalText"></div>
+    <div id="translatedText"></div>
+  </body>
+</html>
