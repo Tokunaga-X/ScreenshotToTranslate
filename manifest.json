@@ -4,10 +4,12 @@
     "version": "0.1",
     "description": "Translate text from screenshots to learn languages while browsing.",
     "permissions": [
-      "storage",
-      "https://translate.yandex.net/*"
+      "storage"
+    ],
+    "host_permissions": [
+      "https://fanyi-api.baidu.com/*"
     ],
     "action": {
       "default_popup": "popup.html"
     }
-  }
+}
